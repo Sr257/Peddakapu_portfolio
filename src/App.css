@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* light background */
+  color: #222; /* dark text */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff; /* white navbar background */
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* subtle shadow */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.logo img {
+  height: 80px;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  color: #222; /* dark icon */
+  cursor: pointer;
+  display: none;
+}
+
+/* Navigation */
+.nav-menu {
+  display: flex;
+}
+
+.bi {
+  color: #e07a5f; /* warm accent */
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-menu ul li {
+  margin: 0 15px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #222; /* dark text */
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-menu ul li a:hover {
+  color: #e07a5f;
+}
+
+/* Mobile Menu */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #fff; /* light menu background */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+  }
+
+  .nav-menu ul li {
+    margin: 10px 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* New Layout for Image and Text */
+.main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  text-align: center;
+  color: #222; /* dark text */
 }
 
-.App-link {
-  color: #61dafb;
+.main-content .image {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.main-content .content {
+  font-size: 16px;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  background: #fff; /* light footer */
+  color: #222;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  bottom: 0;
+}
+
+.footer .social-links a {
+  color: #222;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: #e07a5f;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .main-content .image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main-content .content {
+    font-size: 14px;
   }
 }

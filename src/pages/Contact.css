@@ -1,0 +1,177 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Arial", sans-serif;
+  color: #222; /* Dark text */
+  background-color: #f9f9f9; /* Light background */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional: container class for the section wrapper */
+.contact-details {
+  background-color: #f9f9f9;
+}
+
+/* Main Layout */
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Contact Box */
+.contact-container {
+  max-width: 500px;
+  width: 100%;
+  margin: 250px auto 200px auto;
+  padding: 25px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(244, 162, 97, 0.3);
+}
+
+/* Headings */
+.contact-container h2 {
+  color: #e76f51;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* Paragraphs */
+.contact-container p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Email or Contact Links */
+.contact-container a {
+  color: #f4a261;
+  background: #f1f1f1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.contact-container a:hover {
+  background: #f4a261;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Labels */
+.contact-container strong {
+  color: #e76f51;
+}
+
+/* Call-to-Action Button */
+.btn {
+  display: inline-block;
+  background-color: #f4a261;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+  color: #fff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e76f51;
+  color: #fff;
+}
+
+/* Optional Image Styling */
+.contact-container img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Latest Works Button Wrapper */
+.latest-works-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.latest-works-container .btn {
+  display: inline-block;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding: 12px;
+  text-align: center;
+  background: #eaeaea;
+  color: #222;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    max-width: 90%;
+    padding: 20px;
+    margin-top: 150px;
+  }
+
+  .contact-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-container p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    max-width: 95%;
+    margin-top: 180px;
+    padding: 15px;
+  }
+
+  .contact-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .contact-container p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}

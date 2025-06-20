@@ -1,0 +1,141 @@
+/* === 📌 Education Section Main Styling === */
+.education-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 50px 20px;
+  margin-top: 150px;
+  background-color: #f9f9f9; /* Light background */
+}
+
+.education-content {
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.education-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222; /* Dark heading */
+}
+
+/* === 📌 Card Styles === */
+.education-card {
+  background: #fff; /* White card */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-bottom: 150px;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 16px rgba(244, 162, 97, 0.3);
+}
+
+.education-card h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #e76f51;
+}
+
+.education-institute,
+.education-duration,
+.education-gpa {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* === 📌 Custom Arrows === */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e76f51;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.custom-arrow:hover {
+  transform: scale(1.1);
+  background-color: #f4a261;
+  color: #fff;
+}
+
+/* === 📌 Positioning arrows === */
+.custom-prev {
+  left: -50px;
+}
+
+.custom-next {
+  right: -50px;
+}
+
+/* === 📌 Responsive Design === */
+@media (max-width: 768px) {
+  .education-content {
+    width: 100%;
+  }
+
+  .custom-prev {
+    left: -20px;
+  }
+
+  .custom-next {
+    right: -20px;
+  }
+
+  .education-card {
+    padding: 15px;
+  }
+
+  .education-title {
+    font-size: 24px;
+  }
+}
+
+/* === 📌 Slick Slider Styling === */
+.slick-slider {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === 📌 Fix Slick Arrows Styling === */
+.slick-prev,
+.slick-next {
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  opacity: 1;
+}
+
+/* === 📌 Custom Slick Arrow Icons === */
+.slick-prev::before,
+.slick-next::before {
+  content: "";
+  display: none; /* Hide default arrows */
+}

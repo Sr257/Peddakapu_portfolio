@@ -1,0 +1,229 @@
+/* About Container */
+.about-container {
+  display: flex;
+  flex-direction: row; /* Ensures stacking on smaller screens */
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #ffffff; /* light background */
+  color: #222222; /* dark text */
+  font-size: large;
+  padding-top: 190px;
+  text-align: center;
+  margin-left: 140px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* About Title */
+.about-text h1 {
+  color: #f4a261; /* keep accent color */
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* About Photo */
+.about-photo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-photo img {
+  width: 200px;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  border: 3px solid #f4a261; /* subtle border matching accent */
+  box-shadow: 0 0 15px rgba(244, 162, 97, 0.4); /* warm glow */
+}
+
+.about-photo img:hover {
+  transform: scale(1.05);
+}
+
+/* About Text Section */
+.about-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Fade-in Text */
+.fade-in {
+  font-size: 28px;
+  font-weight: bold;
+  color: #e91e63; /* can keep or change as you want */
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Highlight Text */
+.highlight {
+  color: #f4a261;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* Slide-Up Animation */
+.slide-up {
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.8s ease-in-out forwards;
+}
+
+/* About Button */
+.about-btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #ffffff; /* light button bg */
+  border: 2px solid #f4a261;
+  color: #f4a261;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.about-btn:hover {
+  background-color: #f4a261;
+  color: #232946;
+  transform: scale(1.05);
+}
+
+/* Fix Footer Overlap Issue */
+footer {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #222222;
+  background-color: #f5f5f5;
+  margin-top: 50px; /* Adds spacing between image and footer */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+
+/* Large Screens */
+@media (max-width: 1200px) {
+  .about-container {
+    gap: 30px;
+    margin-left: 0px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .about-container {
+    padding: 50px 30px;
+    margin-left: 0px;
+  }
+
+  .about-text {
+    font-size: medium;
+    text-align: center;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+    margin-top: 160px;
+    margin-left: 0px;
+  }
+
+  .about-text h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .about-photo img {
+    display: none;
+  }
+
+  .fade-in {
+    font-size: 24px;
+  }
+
+  .highlight {
+    font-size: 18px;
+  }
+
+  .slide-up {
+    font-size: 14px;
+  }
+
+  .about-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 90%;
+  }
+
+  /* Ensure Footer Stays Below */
+  footer {
+    margin-top: 80px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .about-container {
+    padding: 20px;
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .about-photo img {
+    width: 150px;
+    margin-bottom: 50px;
+  }
+
+  .about-text h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .fade-in {
+    font-size: 22px;
+  }
+
+  .highlight {
+    font-size: 16px;
+  }
+
+  .slide-up {
+    font-size: 14px;
+  }
+
+  .about-btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}

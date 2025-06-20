@@ -1,0 +1,200 @@
+/* ===========================
+   General Styling
+=========================== */
+.moreabout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9; /* light background */
+  padding: 40px 20px;
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  margin-top: 180px;
+  color: #222; /* dark text */
+}
+
+/* ===========================
+   Back Link Styling
+=========================== */
+.back-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: 400px;
+}
+
+.back-link a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid #e07a5f; /* softer warm accent */
+  transition: all 0.3s ease-in-out;
+  color: #e07a5f;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.back-link a:hover {
+  background-color: #e07a5f;
+  color: #f9f9f9; /* light text on hover */
+}
+
+/* ===========================
+   Slider Settings
+=========================== */
+.slick-slider {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===========================
+   Slide Content Styling
+=========================== */
+.about-section,
+.skills-section,
+.goals-section {
+  background: #fff; /* white background */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+  color: #222; /* dark text */
+  text-align: center;
+}
+
+/* ===========================
+   Typography
+=========================== */
+h2 {
+  font-size: 24px;
+  color: #e07a5f; /* warm accent */
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  color: #333; /* dark grey for easier reading */
+  line-height: 1.5;
+}
+
+/* ===========================
+   Skills List
+=========================== */
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.skills-list .icon {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #e07a5f;
+}
+
+/* ===========================
+   Mobile - Small Devices
+=========================== */
+@media (max-width: 600px) {
+  .moreabout-container {
+    padding: 20px 10px;
+    margin-top: 150px;
+  }
+
+  .slick-slider {
+    width: 100%;
+  }
+
+  .about-section,
+  .skills-section,
+  .goals-section {
+    padding: 20px 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .skills-list li {
+    font-size: 14px;
+  }
+
+  .back-link {
+    justify-content: center;
+    margin-left: 0; /* fix positioning on small screens */
+  }
+
+  .back-link a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* ===========================
+   Tablet - Medium Devices
+=========================== */
+@media (max-width: 768px) {
+  .slick-slider {
+    width: 90%;
+  }
+
+  .about-section,
+  .skills-section,
+  .goals-section {
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+/* ===========================
+   Large Screens
+=========================== */
+@media (min-width: 1200px) {
+  .slick-slider {
+    width: 80%;
+  }
+
+  .about-section,
+  .skills-section,
+  .goals-section {
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .back-link {
+    max-width: 200px;
+  }
+}

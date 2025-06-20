@@ -1,0 +1,180 @@
+/* Global Font & Container Setup */
+body,
+.latest-works-container {
+  font-family: "Times New Roman", Times, serif;
+  color: #222; /* dark text */
+  background-color: #f9f9f9; /* light background */
+}
+
+/* Main Section Container */
+.latest-works-container {
+  max-width: 960px;
+  margin: 150px auto 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #fff; /* white/light container */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Slide Box */
+.project-slide {
+  background-color: rgba(34, 34, 34, 0.05); /* very light translucent */
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* lighter shadow */
+  padding: 30px;
+  margin: 15px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.project-slide:hover {
+  transform: translateY(-5px);
+}
+
+/* Project Headings */
+.project-slide h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #222; /* dark heading */
+}
+
+.project-slide h3 {
+  font-size: 18px;
+  font-style: italic;
+  color: #e07a5f; /* softer accent, less harsh than bright orange */
+  margin-bottom: 20px;
+}
+
+/* Project Details List */
+.project-slide ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-slide ul li {
+  font-size: 18px;
+  color: #333; /* dark but softer than black */
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.project-slide ul li svg {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #e07a5f; /* matching accent color */
+}
+
+/* Back Button Container */
+.back-button1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Back to Home Button */
+.btn1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: 2px solid #e07a5f;
+  background-color: transparent;
+  color: #e07a5f;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn1:hover {
+  background-color: #e07a5f;
+  color: #fff;
+}
+
+.btn1 svg {
+  margin-right: 8px;
+}
+
+/* Carousel Arrows */
+.custom-arrow {
+  position: absolute;
+  top: 45%;
+  z-index: 2;
+  font-size: 28px;
+  color: #e07a5f;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.custom-arrow:hover {
+  transform: scale(1.1);
+}
+
+.custom-prev {
+  left: -40px;
+}
+
+.custom-next {
+  right: -40px;
+}
+
+/* Carousel Dots */
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #e07a5f;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #222;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .latest-works-container {
+    padding: 20px;
+  }
+
+  .project-slide {
+    padding: 20px;
+  }
+
+  .project-slide h2 {
+    font-size: 20px;
+  }
+
+  .project-slide h3 {
+    font-size: 16px;
+  }
+
+  .project-slide ul li {
+    font-size: 16px;
+  }
+
+  .btn1 {
+    padding: 12px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 50%;
+  }
+
+  .btn1 span {
+    display: none;
+  }
+
+  .btn1 svg {
+    margin: 0;
+  }
+
+  .custom-prev {
+    left: -20px;
+  }
+
+  .custom-next {
+    right: -20px;
+  }
+}
