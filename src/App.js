@@ -10,6 +10,7 @@ import Moreabout from "./pages/Moreabout";
 import Latestworks from "./pages/Latestworks";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'bootstrap-icons/font/bootstrap-icons.css';  // <-- Added for icons
 import './App.css';
 import logo3 from './Images/logo4.png';
 import clickSound from './Images/click.mp3';
@@ -93,7 +94,7 @@ const App = () => {
           <p>© 2025 Sowjanya Peddakapu. All Rights Reserved.</p>
           <div className="social-links">
             <a
-              href="https://www.linkedin.com/in/sowjanya-peddakapu"
+              href="https://www.linkedin.com/in/sowjanya-peddakapu-a59b60205/"
               target="_blank"
               rel="noopener noreferrer"
               onClick={playClickSound}
@@ -101,7 +102,7 @@ const App = () => {
               <i className="bi bi-linkedin"></i>
             </a>
             <a
-              href="https://github.com/sowjanya-peddakapu"
+              href="https://github.com/Sr257"
               target="_blank"
               rel="noopener noreferrer"
               onClick={playClickSound}
